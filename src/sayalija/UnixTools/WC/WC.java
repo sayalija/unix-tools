@@ -1,12 +1,12 @@
-package sayalija.UnixTools;
+package sayalija.UnixTools.WC;
 
 /**
  * Created by sayalija on 1/8/14.
  */
-public class WcLib {
+public class WC {
     String text;
 
-    public WcLib(String t) {
+    public WC(String t) {
         text = t;
     }
 
