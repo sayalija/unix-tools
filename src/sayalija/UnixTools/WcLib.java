@@ -15,7 +15,7 @@ public class WcLib {
     }
 
     public int countWords() {
-        return text.split("\\S+").length - 1;
+        return text.split("\\S+").length;
     }
 
     public int countLines() {
