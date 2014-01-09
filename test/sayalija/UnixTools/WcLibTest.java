@@ -16,7 +16,10 @@ public class WcLibTest {
 
     @Test
     public void testCountWords() throws Exception {
-    
+        WcLib wc = new WcLib("Sayali \n Manali Pallavi");
+        int actual = wc.countLines();
+        int expected = 1;
+        assertEquals(expected,actual);
     }
 
     @Test
