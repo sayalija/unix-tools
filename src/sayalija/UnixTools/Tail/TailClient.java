@@ -1,5 +1,7 @@
 package sayalija.UnixTools.Tail;
 
+import sayalija.UnixTools.FileSystem;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,20 +13,8 @@ public class TailClient {
     public static void main(String[] args) {
         int lines = Integer.parseInt(args[0])*-1;
         String fileName = args[1];
-        BufferedReader br = null;
-        String text = null;
-        try {
-            String sCurrentLine;
-
-            br = new BufferedReader(new FileReader(fileName));
-
-            while ((sCurrentLine = br.readLine()) != null) {
-                text += "\n" + sCurrentLine;
-            }
-
-        } catch (IOException e) {
-            System.out.println("File not found");
-        }
+        FileSystem fs = new FileSystem();
+        String text = fs.readFile(fileName);
         String str = "";
         Tail client1 = new Tail(text);
         str = client1.getFooter();
