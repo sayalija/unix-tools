@@ -2,10 +2,6 @@ package sayalija.UnixTools.WC;
 
 import sayalija.UnixTools.FileSystem;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class WcClient {
 
     public static void main(String[] args) {

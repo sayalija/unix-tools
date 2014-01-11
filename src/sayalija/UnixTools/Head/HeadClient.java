@@ -2,10 +2,6 @@ package sayalija.UnixTools.Head;
 
 import sayalija.UnixTools.FileSystem;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class HeadClient {
     public static void main(String[] args) {
         int lines = 0;

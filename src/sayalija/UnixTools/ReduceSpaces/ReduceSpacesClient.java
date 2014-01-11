@@ -2,10 +2,6 @@ package sayalija.UnixTools.ReduceSpaces;
 
 import sayalija.UnixTools.FileSystem;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 /**
  * Created by sayalija on 1/11/14.
  */
