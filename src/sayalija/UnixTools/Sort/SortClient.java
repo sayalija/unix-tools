@@ -1,14 +1,15 @@
 package sayalija.UnixTools.Sort;
 
-/**
- * Created by sayalija on 1/11/14.
- */
+import sayalija.UnixTools.FileSystem;
+
 public class SortClient {
     public static void main(String[] args) {
-        String str = "sss\nfff\nwww\nbbb";
+        String fileName = args[0];
+        FileSystem fs = new FileSystem();
+        String text = fs.readFile(fileName);
         Sort s = new Sort();
-        str = s.getSorted(str);
-        System.out.println(str);
+        text = s.getSorted(text);
+        System.out.println(text);
 
     }
 }
