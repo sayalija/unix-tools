@@ -9,7 +9,8 @@ import java.io.IOException;
  */
 public class HeadClient {
     public static void main(String[] args) {
-        String fileName = args[0];
+        int lines = Integer.parseInt(args[0])*-1;
+        String fileName = args[1];
         BufferedReader br = null;
         String text = null;
         try {
@@ -28,7 +29,7 @@ public class HeadClient {
         Head client1 = new Head(text);
         str = client1.getHeader();
         System.out.println("10 lines--->   \n"+str);
-        Head client2 = new Head(text,3);
+        Head client2 = new Head(text,lines);
         str = client2.getHeader();
         System.out.println("3 lines--->   \n"+str);
     }

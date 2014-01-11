@@ -29,7 +29,7 @@ public class Head {
                 header = header.concat(fileData[i]).concat("\n");
             }
         } catch (Exception ex) {
-            System.out.println("NULL");
+            System.out.println("Exception");
         }
         return header;
     }
