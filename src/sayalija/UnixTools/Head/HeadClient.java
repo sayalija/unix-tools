@@ -9,8 +9,15 @@ import java.io.IOException;
  */
 public class HeadClient {
     public static void main(String[] args) {
-        int lines = Integer.parseInt(args[0])*-1;
-        String fileName = args[1];
+        int lines = 0;
+        String fileName;
+        if(args[0].contains(".")){
+            fileName = args[0];
+        }
+        else{
+            lines = Integer.parseInt(args[0]) * -1;
+            fileName = args[1];
+        }
         BufferedReader br = null;
         String text = null;
         try {
