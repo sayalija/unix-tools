@@ -1,12 +1,6 @@
-package sayalija.UnixTools.Head;
+package sayalija.UnixTools;
 
-import com.sun.deploy.util.StringUtils;
 
-import java.util.Arrays;
-
-/**
- * Created by sayalija on 1/9/14.
- */
 public class Head {
     int lines;
     String text;

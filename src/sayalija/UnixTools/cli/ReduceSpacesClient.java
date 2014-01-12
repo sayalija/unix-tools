@@ -1,6 +1,7 @@
-package sayalija.UnixTools.ReduceSpaces;
+package sayalija.UnixTools.cli;
 
-import sayalija.UnixTools.FileSystem;
+import sayalija.UnixTools.ReduceSpaces;
+import sayalija.fs.FileSystem;
 
 /**
  * Created by sayalija on 1/11/14.

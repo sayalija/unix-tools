@@ -1,8 +1,5 @@
-package sayalija.UnixTools.Tail;
+package sayalija.UnixTools;
 
-/**
- * Created by sayalija on 1/10/14.
- */
 public class Tail {
 
     int lines;

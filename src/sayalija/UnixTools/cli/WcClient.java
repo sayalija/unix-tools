@@ -1,6 +1,7 @@
-package sayalija.UnixTools.WC;
+package sayalija.UnixTools.cli;
 
-import sayalija.UnixTools.FileSystem;
+import sayalija.fs.FileSystem;
+import sayalija.UnixTools.WC;
 
 public class WcClient {
 

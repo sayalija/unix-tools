@@ -1,8 +1,5 @@
-package sayalija.UnixTools.WC;
+package sayalija.UnixTools;
 
-/**
- * Created by sayalija on 1/8/14.
- */
 public class WC {
     String text;
 

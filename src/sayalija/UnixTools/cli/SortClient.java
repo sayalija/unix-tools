@@ -1,6 +1,7 @@
-package sayalija.UnixTools.Sort;
+package sayalija.UnixTools.cli;
 
-import sayalija.UnixTools.FileSystem;
+import sayalija.fs.FileSystem;
+import sayalija.UnixTools.Sort;
 
 public class SortClient {
     public static void main(String[] args) {
