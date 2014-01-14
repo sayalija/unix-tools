@@ -1,5 +1,7 @@
 package sayalija.UnixTools;
 
+import com.sun.org.apache.regexp.internal.recompile;
+
 public class Cut {
     String delimiter ;
     public Cut(){
@@ -14,6 +16,7 @@ public class Cut {
         String[] lines;
         lines = text.split("\n");
         fieldNumber = fieldNumber - 1;
+        String res = "";
         if (!text.contains(delimiter))
             return text;
         for (String line : lines) {
@@ -22,7 +25,8 @@ public class Cut {
                 result.append(fields[fieldNumber]).append("\n");
             else result.append("").append("\n");
         }
-        return result.toString();
+        res = result.toString();
+        return res.substring(0,res.length()-1);
     }
 
 }
