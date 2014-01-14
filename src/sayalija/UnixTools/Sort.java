@@ -11,6 +11,6 @@ public class Sort {
         for (String s : data) {
             result = result.concat(s).concat("\n");
         }
-        return result;
+        return result.substring(0, result.length() - 1);
     }
 }
