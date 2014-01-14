@@ -17,15 +17,15 @@ public class Tail {
 
     public String getFooter() throws NullPointerException {
         String[] fileData = text.split("\n");
-        String header = "";
+        String tailer = "";
         int len = fileData.length;
         try {
             for (int i = len - lines; i < len; i++) {
-                header = header.concat(fileData[i]).concat("\n");
+                tailer = tailer.concat(fileData[i]).concat("\n");
             }
         } catch (Exception ex) {
             System.out.println("Exception");
         }
-        return header;
+        return tailer.substring(0, tailer.length() - 1);
     }
 }
