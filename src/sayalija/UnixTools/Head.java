@@ -25,7 +25,7 @@ public class Head {
         } catch (Exception ex) {
             System.out.println("Exception");
         }
-        return header;
+        return header.substring(0,header.length()-1);
     }
 
 }
