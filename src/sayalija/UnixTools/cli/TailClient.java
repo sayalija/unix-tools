@@ -5,16 +5,20 @@ import sayalija.fs.FileSystem;
 
 public class TailClient {
     public static void main(String[] args) {
-        int lines = Integer.parseInt(args[0]) * -1;
-        String fileName = args[1];
+        int lines = 0;
+        String fileName = "";
+        if (args[0].contains("-")) {
+            lines = Integer.parseInt(args[0]) * -1;
+            fileName = args[1];
+        } else {
+            fileName = args[0];
+            lines = 10;
+        }
         FileSystem fs = new FileSystem();
         String text = fs.readFile(fileName);
         String str = "";
-        Tail client1 = new Tail(text);
-        str = client1.getFooter();
-        System.out.println("10 lines--->   \n" + str);
-        Tail client2 = new Tail(text, lines);
-        str = client2.getFooter();
-        System.out.println("3 lines--->   \n" + str);
+        Tail client = new Tail(text, lines);
+        str = client.getFooter();
+        System.out.println(str);
     }
 }

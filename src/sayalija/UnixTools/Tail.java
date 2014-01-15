@@ -15,7 +15,7 @@ public class Tail {
         text = data;
     }
 
-    public String getFooter() throws NullPointerException {
+    public String getFooter() {
         String[] fileData = text.split("\n");
         String tailer = "";
         int len = fileData.length;
@@ -26,6 +26,6 @@ public class Tail {
         } catch (Exception ex) {
             System.out.println("Exception");
         }
-        return tailer.substring(0, tailer.length() - 1);
+        return tailer.substring(0,tailer.length()-1 );
     }
 }
