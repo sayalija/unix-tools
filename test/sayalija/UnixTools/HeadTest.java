@@ -3,9 +3,6 @@ package sayalija.UnixTools;
 import junit.framework.Assert;
 import org.junit.Test;
 
-/**
- * Created by sayalija on 1/14/14.
- */
 public class HeadTest {
     @Test
     public void testGetHeaderForDefault10Lines() throws Exception {

@@ -6,26 +6,26 @@ public class Head {
     String text;
 
     public Head(String data) {
-        lines = 10;
-        text = data;
+        this.lines = 10;
+        this.text = data;
     }
 
     public Head(String data, int numberOfLines) {
-        lines = numberOfLines;
-        text = data;
+        this.lines = numberOfLines;
+        this.text = data;
     }
 
-    public String getHeader() throws NullPointerException {
+    public String getHeader() {
         String[] fileData = text.split("\n");
-        String header = "";
+        StringBuilder header = new StringBuilder();
         try {
             for (int i = 0; i < lines; i++) {
-                header = header.concat(fileData[i]).concat("\n");
+                header.append(fileData[i]).append("\n");
             }
         } catch (Exception ex) {
             System.out.println("Exception");
         }
-        return header.substring(0,header.length()-1);
+        return header.toString();
     }
 
 }

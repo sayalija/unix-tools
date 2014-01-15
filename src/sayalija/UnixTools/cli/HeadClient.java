@@ -7,21 +7,20 @@ import sayalija.fs.FileSystem;
 public class HeadClient {
     public static void main(String[] args) {
         int lines = 0;
-        String fileName;
-        if (args[0].contains(".")) {
-            fileName = args[0];
-        } else {
+        String fileName = "";
+        if (args[0].contains("-")) {
             lines = Integer.parseInt(args[0]) * -1;
             fileName = args[1];
+        } else {
+            fileName = args[0];
+            lines = 10;
         }
         FileSystem fs = new FileSystem();
         String text = fs.readFile(fileName);
-        String str = "";
-        Head client1 = new Head(text);
-        str = client1.getHeader();
-        System.out.println("10 lines--->   \n" + str);
-        Head client2 = new Head(text, lines);
-        str = client2.getHeader();
-        System.out.println("3 lines--->   \n" + str);
+        StringBuilder str = new StringBuilder();
+
+        Head client = new Head(text, lines);
+        str.append(client.getHeader());
+        System.out.println(str.toString());
     }
 }

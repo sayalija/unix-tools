@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class FileSystem {
     public String readFile(String fileName) {
-        BufferedReader br = null;
-        String text = null;
+        BufferedReader br;
+        String text = "";
         try {
             String sCurrentLine;
 
