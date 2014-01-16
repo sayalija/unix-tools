@@ -27,5 +27,13 @@ public class HeadTest {
         String actual = head.getHeader();
         Assert.assertEquals(actual,expected);
     }
-    
+
+    @Test
+    public void testGetHeaderFor20LinesWhereAvailableStringHas12Lines() throws Exception {
+        Head head = new Head("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",20);
+        String expected = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12";
+        String actual = head.getHeader();
+        Assert.assertEquals(actual,expected);
+    }
+
 }
