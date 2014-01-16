@@ -19,4 +19,13 @@ public class HeadTest {
         String actual = head.getHeader();
         Assert.assertEquals(actual,expected);
     }
+
+    @Test
+    public void testGetHeaderFromEmptyString() throws Exception {
+        Head head = new Head("",3);
+        String expected = "";
+        String actual = head.getHeader();
+        Assert.assertEquals(actual,expected);
+    }
+    
 }
