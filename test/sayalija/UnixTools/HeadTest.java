@@ -8,7 +8,9 @@ public class HeadTest {
     public void testGetHeaderForDefault10Lines() throws Exception {
         Head head = new Head("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12");
         String expected = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10";
+
         String actual = head.getHeader();
+
         Assert.assertEquals(actual,expected);
     }
 
@@ -16,7 +18,9 @@ public class HeadTest {
     public void testGetHeaderForLimitedLinesAs3() throws Exception {
         Head head = new Head("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",3);
         String expected = "1\n2\n3";
+
         String actual = head.getHeader();
+
         Assert.assertEquals(actual,expected);
     }
 
@@ -24,7 +28,9 @@ public class HeadTest {
     public void testGetHeaderFromEmptyString() throws Exception {
         Head head = new Head("",3);
         String expected = "";
+
         String actual = head.getHeader();
+
         Assert.assertEquals(actual,expected);
     }
 
@@ -32,7 +38,9 @@ public class HeadTest {
     public void testGetHeaderFor20LinesWhereAvailableStringHas12Lines() throws Exception {
         Head head = new Head("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",20);
         String expected = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12";
+
         String actual = head.getHeader();
+
         Assert.assertEquals(actual,expected);
     }
 

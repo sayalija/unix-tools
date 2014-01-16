@@ -16,9 +16,13 @@ public class Tail {
     }
 
     public String getFooter() {
+        if(text == "")
+            return  "";
         String[] fileData = text.split("\n");
         String tailer = "";
         int len = fileData.length;
+        if(len < lines)
+            lines = len;
         try {
             for (int i = len - lines; i < len; i++) {
                 tailer = tailer.concat(fileData[i]).concat("\n");

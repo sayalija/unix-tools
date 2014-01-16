@@ -16,8 +16,12 @@ public class Head {
     }
 
     public String getHeader() {
+        if(text == "")
+            return "";
         String[] fileData = text.split("\n");
         StringBuilder header = new StringBuilder();
+        if(fileData.length < lines)
+            lines = fileData.length;
         try {
             for (int i = 0; i < lines; i++) {
                 header.append(fileData[i]).append("\n");
