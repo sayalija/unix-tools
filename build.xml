@@ -8,13 +8,13 @@
         <javac srcdir="src" destdir="classes" includeAntRuntime="false"/>
     </target>
 
-    <target name="createFolderStructer">
+    <target name="createFolderStructer" depends="compile">
         <mkdir dir="unix-tools"/>
         <mkdir dir="unix-tools/lib"/>
         <mkdir dir="unix-tools/bin"/>
         <mkdir dir="unix-tools/docs"/>
         <copy todir="unix-tools/bin">
-            <fileset dir="run-scripts"/>
+            <fileset dir="shell-scripts"/>
         </copy>
         <copy file="README.md" tofile="unix-tools/README.md"/>
     </target>
@@ -29,7 +29,7 @@
                  destdir="unix-tools/docs"/>
     </target>
 
-    <target name="createZip" depends="createJar,compile,createFolderStructer,generateDocs">
+    <target name="createZip" depends="createJar,createFolderStructer,generateDocs">
         <zip destfile="unix-tools.zip" basedir="unix-tools" update="true"/>
         <delete dir="unix-tools"/>
     </target>
