@@ -45,7 +45,6 @@
             <arg value="sayalija.UnixTools.WCTest"></arg>
 
         </java>
-        <delete file="junit-4.10.jar"></delete>
 
     </target>
 
