@@ -1,1 +1,1 @@
-java -cp $SHELL_COMMANDS/unix-tools.jar sayalija.UnixTools.cli.ReduceSpacesClient "${@}"
+java -cp $UNIX_TOOLS/lib/unix-tools.jar sayalija.UnixTools.cli.ReduceSpacesClient "${@}"

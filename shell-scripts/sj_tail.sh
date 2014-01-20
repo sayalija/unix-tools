@@ -1,1 +1,1 @@
-java -cp $UNIX_TOOLS/unix-tools.jar sayalija.UnixTools.cli.TailClient "${@}"
+java -cp $UNIX_TOOLS/lib/unix-tools.jar sayalija.UnixTools.cli.TailClient "${@}"
