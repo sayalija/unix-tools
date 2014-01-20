@@ -1,1 +1,1 @@
-java -cp $UNIX_TOOLS/lib/unix-tools.jar sayalija.UnixTools.cli.WcClient "${@}"
+java -cp ${UNIX_TOOLS}/lib/unix-tools.jar sayalija.UnixTools.cli.WcClient "${@}"
